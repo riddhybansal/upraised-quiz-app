@@ -1,0 +1,54 @@
+.container ol li{
+    font-size: 1.4em;
+    color: #cecece;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.start .btn{
+padding: 16px;
+background: #FF3B3F;
+border-radius: 80px;
+height: 60px;
+width: 350px;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 900;
+font-size: 23px;
+color: #FFFFFF;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+#form .userid{
+    padding: .7em 2em;
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.quiz{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+margin: 50px 0px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 80px;
+line-height: 90px;
+/* or 112% */
+
+text-align: center;
+
+color: #FF3B3C;
+}

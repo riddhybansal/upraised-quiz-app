@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --primary-color: #AF9CF3;
+  --dark-color:#222222;
+  --light-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html{
+  height: calc(100vh - 40px);
+  background: linear-gradient(180deg, rgba(175, 156, 243, 0) 7.92%, #AF9CF3 86.48%);
+  background-blend-mode: multiply;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* > *{
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexbox{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  
+  display: block;
+  position: relative;
+  margin: 40px auto;
+  height: auto;
+  width: 800px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .title{
+    font-size: 3em;
+    text-align: center;
+    border: 5px solid var(--primary-color);
+    padding: .3em .2em;
+    border-radius: 4px;
+}
+
+.text-light {
+	color: var(--light-color)
+}
+
+.container ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+	overflow: auto;
+}
+
+.questions{
+width: 100vw;
+height: calc(100vh - 150px);
+background: #FFFFFF;
+border-radius: 60px 60px 0px 0px;
+margin-top: 150px;
+padding: 50px;
+}
+.questions-text{
+  font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+color: #000000;
+}
+
+
+
+.container .btn{
+    padding: .2em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1.2em;
+}
+
+.container .btn:hover{
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #202020;
+}
+
+.next{
+    padding: 16px;
+    background: #FF3B3F;
+    border-radius: 80px;
+    height: 60px;
+    width: 350px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 23px;
+    color: #FFFFFF;
+  /* position: absolute;
+  width: 670px;
+  height: 120px;
+  left: 40px;
+  top: 1464px;
+  
+  background: #FF3B3F;
+  border-radius: 60px; */
+}
+
+.prev{
+    background-color: #faff5a;
+    justify-self: flex-start;
+}
+
+ul li{
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 75px;
+	background: #F3F4FA;
+border-radius: 20px;
+margin-top: 8px;
+}
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+  display: block;
+  position: relative;
+  font-weight: 300;
+  padding: 25px 25px 25px 80px;
+  margin-left: 10px;
+  height: 20px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul li:hover label{
+	color:var(--primary-color);
+}
+
+ul li .check{
+  display: block;
+  position: absolute;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  top: 30px;
+  left: 20px;
+	z-index: 5;
+	/* transition: border .25s linear; */
+	/* -webkit-transition: border .25s linear; */
+}
+
+ul li:hover .checked {
+  border: 5px solid #FFFFFF;
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid var(--primary-color)
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: var(--primary-color)
+}
+
+input[type=radio]:checked ~ .text-primary{
+  color: var(--primary-color)
+} 
+
+/* To get selected option we are using this checked class */
+.checked {
+  border: 5px solid var(--primary-color) !important;
+}
+
+.checked::before{
+  background: var(--primary-color)
+}
+
+.option-text{
+font-family: 'Nunito';
+font-style: normal;
+font-size: 25px;
+color: #000000;
+}
+
+.marTB30{
+  margin: 30px 0px;
 }

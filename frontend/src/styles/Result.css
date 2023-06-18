@@ -1,0 +1,129 @@
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    border: 1px solid #cecece;
+    padding: 3em 4em;
+    gap: 1em;
+}
+
+.container .flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container .flex span {
+    font-size: 1.4em;
+    color: #cecece;
+}
+
+.container .flex span.achive {
+    font-weight: bold;
+    color: #ff2a66;
+    color: #2aff95;
+}
+
+table {
+    width: 100%;
+}
+
+.table-header {
+    color: #cecece;
+    font-size: 1.1em;
+    text-align: center;
+    background: #212121;
+    padding: 18px 0;
+}
+
+.table-body {
+    font-size: 1.1em;
+    text-align: center;
+    /* color: #cecece; */
+    background: #d8d8d8;
+    padding: 18px 0;
+}
+
+.table-header > tr > td{
+    border: 1px solid #faff5a;   
+}
+
+
+.indicator {
+    position: relative;
+    width: 350px;
+    height: 175px;
+    overflow: hidden;
+  }
+  
+  .indicator::before,
+  .indicator::after {
+    position: absolute;
+  }
+  
+  .indicator::before {
+    content: "";
+    width: inherit;
+    height: inherit;
+    border: 45px solid rgba(211, 211, 211, 0.3);
+    border-bottom: none;
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
+  }
+  
+  .indicator span.bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 45px solid;
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    z-index: 4;
+    border-color: green;
+    animation-name: rotate-one;
+  }
+  
+  .indicator span.result {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: cadetblue;
+  }
+  
+  span.result span:nth-child(1) {
+    font-size: 2rem;
+  }
+
+  .quiz-result{
+    font-size: 30px;
+    font-weight: 300s;
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotate(0);
+    }
+  }
+
+  .marTB25{
+    margin: 25px 0px;
+  }
+
+  .w-100{
+    width:100%
+  }
+  

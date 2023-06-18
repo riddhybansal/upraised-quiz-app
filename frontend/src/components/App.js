@@ -1,31 +1,35 @@
 import '../styles/App.css';
-import { createBrowserRouter , RouterProvider} from 'react-router-dom'
-import Login from './Login';
-import Question from './Question';
-import Score from './Score';
 
-// Routes 
-const app_router=createBrowserRouter([
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+/** import components */
+import Main from './Main';
+import Quiz from './Quiz';
+import Result from './Result';
+import { CheckUserExist } from '../helper/helper';
+
+
+/** react routes */
+const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Login></Login>
+    path : '/',
+    element : <Main></Main>
   },
   {
-    path:'/quiz',
-    element:<Question></Question>
+    path : '/quiz',
+    element : <CheckUserExist><Quiz /></CheckUserExist>
   },
   {
-    path:'/score',
-    element:<Score></Score>
+    path : '/result',
+    element : <CheckUserExist><Result /></CheckUserExist>
   },
 ])
 
 function App() {
   return (
-<>
-      <RouterProvider router={app_router}></RouterProvider>
-      </>
-    
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

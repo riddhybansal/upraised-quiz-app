@@ -36,7 +36,7 @@ export async function saveScore(req,res){
         const { username, result, attempts, points, achived } = req.body;
         if(!username && !result) throw new Error('Data Not Provided...!');
 
-        Results.create({ username, result, attempts, points, achived }, function(err, data){
+        Results.create({ username, result, attempts, points, achived }).then( function(err, data){
             res.json({ msg : "Result Saved Successfully...!"})
         })
 

@@ -8,7 +8,10 @@ import connect from './database/connection.js'
 const app =express()
 
 app.use(morgan('tiny'));
-app.use(cors());
+
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.json());
 config(); //initialise dotenv
 //Server port
