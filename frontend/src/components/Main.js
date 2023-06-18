@@ -10,27 +10,27 @@ export default function Main() {
     const dispatch = useDispatch()
 
 
-    function startQuiz(){
-        if(inputRef.current?.value){
+    function startQuiz() {
+        if (inputRef.current?.value) {
             dispatch(setUserId(inputRef.current?.value))
         }
     }
 
-  return (
-    <div className='container'>
-        <div className='flexbox'>
+    return (
+        <div className='container'>
+            <div className='flexbox'>
 
-           <div className="quiz bg-white flexbox">QUIZ</div> 
+                <div className="quiz bg-white flexbox">QUIZ</div>
+            </div>
+
+            <form id="form">
+                <input ref={inputRef} className="userid" type="text" placeholder='Username*' />
+            </form>
+
+            <div className='start'>
+                <Link className='btn' to={'quiz'} onClick={startQuiz}>Start Quiz</Link>
+            </div>
+
         </div>
-
-        <form id="form">
-            <input ref={inputRef} className="userid" type="text" placeholder='Username*' />
-        </form>
-
-        <div className='start'>
-            <Link className='btn' to={'quiz'} onClick={startQuiz}>Start Quiz</Link>
-        </div>
-
-    </div>
-  )
+    )
 }

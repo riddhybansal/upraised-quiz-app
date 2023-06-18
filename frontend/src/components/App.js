@@ -12,16 +12,16 @@ import { CheckUserExist } from '../helper/helper';
 /** react routes */
 const router = createBrowserRouter([
   {
-    path : '/',
-    element : <Main></Main>
+    path: '/',
+    element: <Main></Main>
   },
   {
-    path : '/quiz',
-    element : <CheckUserExist><Quiz /></CheckUserExist>
+    path: '/quiz',
+    element: <CheckUserExist><Quiz /></CheckUserExist>
   },
   {
-    path : '/result',
-    element : <CheckUserExist><Result /></CheckUserExist>
+    path: '/result',
+    element: <CheckUserExist><Result /></CheckUserExist>
   },
 ])
 
